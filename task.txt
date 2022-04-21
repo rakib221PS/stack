@@ -1,0 +1,8 @@
+Write Your own Vector, starting from nothing (without looking at the code of either Struct or Vector, or examples shown during the lecture). Make the data structure safe to use (use excaptions and be sure to include operator= and a copy constructor).
+Please add an at method to the Vector, that takes an integer as an argument and returns an int&. The method checks if the integer is a index of an element in the array (is greater than 0, but smaller than capacity). If the argument is a valid index, it returns the value stored in the array at that index, and throws an out_of_range exception otherwise.
+Add an operator= and a copy constructor to the Stack.
+Add a constructor which allows the user to set the initial size of the Vector. Add another one which not only initializes the size of the Vector, but also initializes values in the Vector to some initial value passed as argument.
+Add a operator+ to Vector which takes another Vector as an argument. It is meant to return a Vector with all the elements from the both vectors.
+Add a resize operation, which is meant to change the size of the Vector. Allow downsizg the vector as well. Reuse resize in other methods.
+In push_back (or push in Stack), we always increase the capacity of the Vector (mem's length) by multiplyin the previous capacity by two. Try to insert a million elements to the vector. Now change Your code, and test how would the time change, if mem was resized by one element.
+In the Vector example, the capacity increases twofold during push_back. What if the initial capacity of the vector was 0? If the initial requested capacity is zero, should mem be a nullptr? How would that affect the destructor (can You delete nullptr)? How to fix these issues?
